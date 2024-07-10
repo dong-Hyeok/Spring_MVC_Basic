@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>text vs utext</h1>
+<ul>
+    <li>escape 처리 : th:text = <span th:text="${data}"></span></li>
+    <li>unescape 처리 : th:utext = <span th:utext="${data}"></span></li>
+</ul>
+
+<h1><span th:inline="none">[[...]] vs [(...)]</span></h1>
+<ul>
+    <li><span th:inline="none">escape 처리 : [[...]] = </span>[[${data}]]</li>
+    <li><span th:inline="none">unescape 처리 : [(...)] = </span>[(${data})]</li>
+</ul>
+
+<h3>
+    실제 서비스를 개발하다 보면 escape를 사용하지 않아서 HTML이 정상 렌더링 되지 않는 수 많은 문제가 발생 한다.
+</h3>
+<h3>
+    escape를 기본으로 하고, 꼭 필요한 때만 unescape를 사용하자.
+</h3>
+
+</body>
+</html>
