@@ -13,6 +13,9 @@ public class ItemServiceApplication {
 		SpringApplication.run(ItemServiceApplication.class, args);
 	}
 
+
+	// 스프링부트는 자동으로 빈을 등록해주기 때문에 다음과 같이 직접 등록할 필요가 없다.
+	// 단, application.properties에 설정을 추가해야 한다 :  spring.messages.basename=messages
 /*
 	@Bean
 	public MessageSource messageSource() {
