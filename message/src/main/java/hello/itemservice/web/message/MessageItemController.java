@@ -10,11 +10,18 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
+
+
 @Controller
 @RequestMapping("/message/items")
 @RequiredArgsConstructor
 public class MessageItemController {
 
+    /**
+     * itemRepository 필드는 final 키워드로 선언되어 있고,
+     * @RequiredArgsConstructor 어노테이션이 붙어 있기 때문에,
+     * 이 필드에 대한 생성자 인자가 자동으로 생성됩니다.
+     */
     private final ItemRepository itemRepository;
 
     @GetMapping
